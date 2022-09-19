@@ -1,5 +1,6 @@
 html,
 body {
+  height: 90%;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -14,13 +15,73 @@ a {
 * {
   box-sizing: border-box;
 }
+body{
+  background: radial-gradient(rgb(247, 244, 244),rgb(232, 232, 232));  
+}
+.page{
+  padding: 3% 10%;
+}
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+
+/* blog page */
+.blog-content{
+  margin: 5%;
+  padding: 1em 3em;
+  background-color: white;
+  border-radius: 1em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.blog-page{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: .5em 1.5em;
+  position: absolute;
+  width: 100%;
+}
+.blog-preview{
+  width: 90%;
+  height: 20em;
+  margin: 1em;
+  font-size: .7em;
+  padding: 0em 1em;
+  background-color: rgb(251, 249, 249);
+  border-radius: 1em;
+  text-align: left;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+h3{
+  cursor: pointer;
+}
+.p-2{
+  display: inline-block;
+  font-size: .7em;
+  color: rgb(98, 98, 98);
+}
+.p-3{
+  font-size: .5em;
+  color: rgb(98, 98, 98);
+}
+.p-a{
+  text-align: right;
+  margin-left: 5em;
+  color: rgb(49, 49, 49);
+}
+
+@media screen and (min-width:560px){
+  .blog-page{
+    padding: 2% 7%;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  body {
-    color: white;
-    background: black;
+}
+@media screen and (min-width:1080px){
+  .page{
+    padding: 3% 15%;
+  }
+  .blog-page{
+    padding: 2% 15%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .blog-content{
+    padding: 5% 18%;
   }
 }
